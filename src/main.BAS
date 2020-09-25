@@ -20,12 +20,12 @@
     2000 FOR B=0 TO 12:READ D$
         2030 FOR A=0 TO 15
             2060 H$=mid$(D$,A+1,1)
-            2065 on val(H$) gosub 3000,3010,3020,3030,3040
-            2070 'if H$="1" then COPY(0,0)-(15,15),1 TO(A*16,B*16)
-            2080 'if H$="2" then COPY(16,0)-(31,15),1 TO(A*16,B*16)
-            2090 'if H$="3" then COPY(32,0)-(47,15),1 TO(A*16,B*16)
-            2100 'if H$="4" then COPY(48,0)-(63,15),1 TO(A*16,B*16)
-            2110 'if H$="5" then COPY(64,0)-(79,15),1 TO(A*16,B*16)
+            2065 'on val(H$) gosub 3000,3010,3020,3030,3040
+            2070 if H$="1" then COPY(0,0)-(15,15),1 TO(A*16,B*16)
+            2080 if H$="2" then COPY(16,0)-(31,15),1 TO(A*16,B*16)
+            2090 if H$="3" then COPY(32,0)-(47,15),1 TO(A*16,B*16)
+            2100 if H$="4" then COPY(48,0)-(63,15),1 TO(A*16,B*16)
+            2110 if H$="5" then COPY(64,0)-(79,15),1 TO(A*16,B*16)
         2120 NEXT 
     2130 NEXT
     2140 preset (0,0):print #1,"fre:"fre(0)" time:"time/50
@@ -44,11 +44,6 @@
     2920 DATA 3333333333333333
 2930 RETURN
 
-3000 COPY(0,0)-(15,15),1 TO(A*16,B*16):return
-3010 COPY(16,0)-(31,15),1 TO(A*16,B*16):return
-3020 COPY(32,0)-(47,15),1 TO(A*16,B*16):return
-3030 COPY(48,0)-(63,15),1 TO(A*16,B*16):return
-3040 COPY(64,0)-(79,15),1 TO(A*16,B*16):return
 
 
 1 'Rutina dibujar tiles page 1'

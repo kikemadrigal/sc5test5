@@ -1,2 +1,2 @@
-10 cls:load"mapea.bas",r
+10 cls:load"main.bas",r
 
