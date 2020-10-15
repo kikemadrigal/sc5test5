@@ -14,7 +14,7 @@ for /R bin/ %%a in (*.bin) do (
     start /wait tools/Disk-Manager/DISKMGR.exe -A -F -C %TARGET_DSK% "%%a")   
 
 rem abrimos nuestro emulador preferido
-copy %TARGET_DSK% tools\emulators\BlueMSX
-start /wait tools/emulators/BlueMSX/blueMSX.exe -diska %TARGET_DSK%
+rem copy %TARGET_DSK% tools\emulators\BlueMSX
+rem start /wait tools/emulators/BlueMSX/blueMSX.exe -diska %TARGET_DSK%
 rem start /wait emulators/fMSX/fMSX.exe -diska %TARGET_DSK%
-rem start /wait tools/emulators/openmsx/openmsx.exe -machine Philips_NMS_8255 -diska %TARGET_DSK%
+start /wait tools/emulators/openmsx/openmsx.exe -machine Philips_NMS_8255 -diska %TARGET_DSK%
